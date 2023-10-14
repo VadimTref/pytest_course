@@ -5,8 +5,6 @@ import time
 driver = webdriver.Chrome()
 
 
-
-
 def test_login_form():
     driver.get("https://www.saucedemo.com/")
 
@@ -23,13 +21,3 @@ def test_login_form():
     assert driver.current_url == "https://www.saucedemo.com/inventory.html"
 
     driver.quit()
-
-
-
-
-
-
-
-
-
-

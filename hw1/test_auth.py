@@ -19,7 +19,7 @@ def test_auth_pos():
 
     assert driver.current_url == "https://www.saucedemo.com/inventory.html"
 
-    # driver.quit()
+    driver.quit()
 
 
 def test_auth_neg():
