@@ -1,21 +1,6 @@
 import pytest
-from selenium.webdriver.chrome.options import Options
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 import requests
-
-
-@pytest.fixture
-def chrome_options():
-    options = Options()
-    return options
-
-
-@pytest.fixture
-def driver(chrome_options):
-    driver = webdriver.Chrome(options=chrome_options)
-    yield driver
-    driver.quit()
 
 
 @pytest.fixture

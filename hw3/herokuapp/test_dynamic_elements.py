@@ -1,37 +1,12 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-
-@pytest.fixture()
-def chrome_options():
-    options = Options()
-    options.add_argument('--incognito')
-    # options.add_argument('--headless')
-    return options
-
-
-@pytest.fixture()
-def driver(chrome_options):
-    driver = webdriver.Chrome(options=chrome_options)
-    # driver.implicitly_wait(10)
-    yield driver
-    driver.quit()
 
 
 @pytest.fixture
 def open_source(driver):
     driver.get('https://the-internet.herokuapp.com/dynamic_loading')
     assert driver.current_url == 'https://the-internet.herokuapp.com/dynamic_loading'
-
-
-@pytest.fixture()
-def wait(driver):
-    wait = WebDriverWait(driver, timeout=10)
-    return wait
 
 
 def test_element_is_hidden(driver, open_source, wait):
