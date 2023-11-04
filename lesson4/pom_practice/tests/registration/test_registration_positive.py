@@ -1,5 +1,6 @@
 from data import REGISTRATION_PAGE
-from pages.registration_page import RegistrationPage
+from lesson4.pom_practice.pages.registration_page import RegistrationPage
+# from lesson4.pom_practice.conftest import driver, options
 
 
 class TestRegistration():

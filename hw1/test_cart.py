@@ -34,7 +34,6 @@ def login_form(driver):
 
 
 def test_add_item_to_cart_from_catalog(driver, login_form):
-
     add_button = driver.find_element(By.ID, 'add-to-cart-sauce-labs-backpack')
     add_button.click()
 
@@ -49,7 +48,6 @@ def test_add_item_to_cart_from_catalog(driver, login_form):
 
 
 def test_remove_item_from_cart_through_cart(driver, login_form):
-
     add_button = driver.find_element(By.ID, 'add-to-cart-sauce-labs-backpack')
     add_button.click()
 
@@ -82,9 +80,7 @@ def test_remove_item_from_cart_through_cart(driver, login_form):
     assert cart_badge_qty_after_remove is True
 
 
-
 def test_add_item_to_cart_from_product_card(driver, login_form):
-
     item_name = driver.find_element(By.CSS_SELECTOR, '#item_4_title_link>div')
     item_name.click()
 
@@ -105,7 +101,6 @@ def test_add_item_to_cart_from_product_card(driver, login_form):
 
 
 def test_remove_item_from_cart_through_item_card(driver, login_form):
-
     item_name = driver.find_element(By.CSS_SELECTOR, '#item_4_title_link>div')
     item_name.click()
 
