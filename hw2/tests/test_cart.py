@@ -70,9 +70,8 @@ class TestCart:
         page.cart_link().click()
 
         page = CartPage(driver, CART_PAGE_URL)
-        item = page.item()
 
-        assert item.is_displayed()
+        assert page.item().is_displayed()
 
         item_is_visible_before_remove = page.item()
         qty_of_items_in_cart_badge_before_remove = page.cart_link().text
